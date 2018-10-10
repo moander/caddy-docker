@@ -1,0 +1,39 @@
+HOSTNAME {
+    tls EMAIL {
+        TLS_STAGE
+        TLS_EXTRA_1
+        TLS_EXTRA_2
+        TLS_EXTRA_3
+        TLS_EXTRA_4
+        TLS_EXTRA_5
+        TLS_EXTRA_6
+        TLS_EXTRA_7
+        TLS_EXTRA_8
+        TLS_EXTRA_9
+    }
+    log /dev/stdout
+    SERVER_EXTRA_1
+    SERVER_EXTRA_2
+    SERVER_EXTRA_3
+    SERVER_EXTRA_4
+    SERVER_EXTRA_5
+    SERVER_EXTRA_6
+    SERVER_EXTRA_7
+    SERVER_EXTRA_8
+    SERVER_EXTRA_9
+    proxy PROXY_PATH PROXY_TARGET {
+        header_upstream X-Real-Host {host}
+        header_upstream X-Real-IP {remote}
+        header_upstream X-Forwarded-For {remote}
+        header_upstream X-Forwarded-Proto {scheme}
+        PROXY_EXTRA_1
+        PROXY_EXTRA_2
+        PROXY_EXTRA_3
+        PROXY_EXTRA_4
+        PROXY_EXTRA_5
+        PROXY_EXTRA_6
+        PROXY_EXTRA_7
+        PROXY_EXTRA_8
+        PROXY_EXTRA_9
+    }
+}
