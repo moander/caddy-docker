@@ -23,6 +23,7 @@ ENV ACME_AGREE="true"
 
 COPY --from=builder /caddy /usr/bin/caddy
 
+RUN apk add --no-cache ca-certificates
 EXPOSE 80 443
 VOLUME /root/.caddy /srv
 WORKDIR /srv
